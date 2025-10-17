@@ -1,0 +1,177 @@
+/*--------------------
+Global Reset
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f0f6ff;
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------
+Chat Container
+--------------------*/
+.chat {
+  width: 100%;
+  max-width: 540px;
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 100, 200, 0.12);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/*--------------------
+Header Bar
+--------------------*/
+.chat-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #66b2ff, #3399ff);
+  color: #ffffff;
+  padding: 15px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.doctor-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 2px;
+}
+
+/*--------------------
+Messages Area
+--------------------*/
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background: #f0f6ff;
+}
+
+.messages .messages-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/*--------------------
+Bot Message */
+.message {
+  display: table;             /* keeps bubble only as wide as content */
+  margin: 8px 0 8px 8px;      /* top/bottom 8px, left 8px, right 0 */
+  background: #d9ebff;
+  color: #003366;
+  padding: 10px 14px;
+  border-radius: 18px 18px 18px 0; /* rounded corners with bottom-left flat */
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 70%;
+  text-align: left;           /* text inside bubble aligned left */
+  word-wrap: break-word;
+}
+
+/* Short bot message */
+.message.short {
+  padding: 6px 10px;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+/*--------------------
+User Message */
+.message.message-personal {
+  display: table;             /* forces bubble to take only needed width */
+  margin: 12px 0 8px auto;    /* top spacing + right align */
+  background: #66b2ff;
+  color: #ffffff;
+  border-radius: 18px 18px 0 18px;
+  padding: 10px 14px;
+  font-size: 14px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* Short user message */
+.message.message-personal.short {
+  padding: 6px 10px;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+/*--------------------
+Message Box */
+.message-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #ffffff;
+  border-top: 1px solid #d9ebff;
+}
+
+.message-input {
+  flex: 1;
+  border: 1px solid #c3dafc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  outline: none;
+  color: #333333;
+}
+
+.message-input::placeholder {
+  color: #888888;
+}
+
+.message-submit {
+  border: none;
+  background: #66b2ff;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.message-submit:hover {
+  background: #3399ff;
+}
+
+/*--------------------
+Scrollbar */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+.messages::-webkit-scrollbar-thumb {
+  background: #66b2ff;
+  border-radius: 3px;
+}
+.messages::-webkit-scrollbar-track {
+  background: #e3f1ff;
+}
+
+.message::before,
+.message.message-personal::before {
+  display: none !important;
+  content: none !important;
+}
