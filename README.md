@@ -40,3 +40,7 @@ Since this was my first time using AWS, it took time to understand how services 
 
 ## 💡 Learning Outcome
 This project helped me understand **serverless architecture**, **cloud integration**, and how different **AWS services** interact in a real-world use case.
+
+
+<img width="641" height="674" alt="image" src="https://github.com/user-attachments/assets/4700efe3-64fe-41b0-adb6-dd24b6e7de7d" />
+
